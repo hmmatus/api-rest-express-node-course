@@ -18,9 +18,8 @@ console.log('BD Server', config.get('configDB.host'));
 
 if (app.get('env') === 'development') {
 // * Morgan use Case
-  app.use(morgan('tiny'));
-  console.log('Morgan enabled');
-  inicioDebug('Morgan esta habilitado');
+  app.use(morgan('tiny')); // Habilita un middleware para logger que devuelve cada vez que se ejecuta un endpoint
+  inicioDebug('Morgan enabled');
 }
 
 dbDebug('Conectando con base de datos');
